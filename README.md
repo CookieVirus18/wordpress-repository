@@ -1,2 +1,2 @@
-wordpress-repository
+My Wordpress Code Repository
 ====================
