@@ -1,0 +1,16 @@
+// JAVASCRIPT LOCALIZATION
+
+function my_scripts_method() {
+	wp_register_script( "mainjavascript", get_bloginfo('stylesheet_directory')."/js/mainjavascript.js" , "", "1" , false );
+    wp_enqueue_script( 'mainjavascript' );
+    wp_localize_script( 'mainjavascript', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));    
+	) ); 
+}
+
+add_action( 'wp_enqueue_scripts','my_scripts_method' ); // wp_enqueue_scripts action hook to link only on the front-end
+
+// Usage
+
+var ajax = myAjax.ajaxurl; // 
+
+
